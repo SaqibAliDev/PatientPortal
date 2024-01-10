@@ -1,0 +1,19 @@
+<div class="mt-3 container">
+    <!-- <div class="">
+        <img src="../../../assets/images/Altumed-Logo 140x44.png" alt="" width="140" height="44">
+    </div> -->
+    <div class="card">
+        <div>
+            <img src="../../../assets/images/Altumed-Logo 140x44.png" alt="" width="140" height="44">
+            <p-steps [model]="items" [(activeIndex)]="currentStep" [readonly]="true"></p-steps>
+        </div>
+        <!-- <p-steps [readonly]="true"></p-steps> -->
+    </div>
+
+    <div *ngIf="currentStep === 0">
+        <app-statement-detail (onNext)="nextStep()"></app-statement-detail>
+    </div>
+    <div *ngIf="currentStep === 1">
+        <app-card-detail (onNext)="nextStep()" (onPrev)="prevStep()"></app-card-detail>
+    </div>
+</div>

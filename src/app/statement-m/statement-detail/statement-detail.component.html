@@ -1,0 +1,49 @@
+<div class="stepsdemo-content">
+    <p-card>
+        <ng-template pTemplate="title">
+            Hello
+        </ng-template>
+        <ng-template pTemplate="subtitle">
+            Please Verify Patient Information
+        </ng-template>
+        <ng-template pTemplate="content">
+            <div class="row">
+
+                <div class="p-fluid" class="field col-md-2">
+                    <label for="statement">Statement ID</label>
+                    <input #statement="ngModel" id="statement" type="text" required pInputText
+                        [(ngModel)]="personalInformation.statement"
+                        [ngClass]="{'ng-dirty': (statement.invalid && submitted) || (statement.dirty && statement.invalid)}">
+                    <small *ngIf="(statement.invalid && submitted) || (statement.dirty && statement.invalid)"
+                        class="p-error">Statement is required.</small>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="month">Month</label>
+                        <p-dropdown inputId="month" [(ngModel)]="personalInformation.month" [options]="months"
+                            placeholder="Select a month"></p-dropdown>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="day">Day</label>
+                        <p-dropdown inputId="day" [(ngModel)]="personalInformation.day" [options]="months"
+                            placeholder="Select a day"></p-dropdown>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="year">Year</label>
+                        <p-dropdown inputId="year" [(ngModel)]="personalInformation.year" [options]="months"
+                            placeholder="Select a year"></p-dropdown>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button>View Account Detail</button>
+            </div>
+
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <div class="grid grid-nogutter justify-content-end">
+                <p-button label="Next" (onClick)="nextPage()" icon="pi pi-angle-right" iconPos="right"></p-button>
+            </div>
+        </ng-template>
+    </p-card>
+</div>

@@ -1,0 +1,23 @@
+/* colors  */
+:root {
+  --blue-gradient: linear-gradient(to top, #26a1ab 0%, #32c5d2 100%);
+  --gray-gradient: linear-gradient(to top, #ffffff, #eff3f8);
+  --blue-font: #2dacb9;
+  --list-color: #2397a1;
+  --bg-color: #eff3f8;
+  --white: #ffff;
+  --green: #0fcc45;
+  --gray-light: #b0a1a1;
+  --gray-bg-div: #f5f5f5;
+  --gray-light-br: #dfdfdf;
+  --blue-btn: #32c5d2;
+  --sea-green: #44b6ae;
+  --fgreen: #1fdc70;
+  --bluegray: #4f7e82;
+  --yellow: #f3c200;
+  --brand-green: #2dacb9;
+  --brand-blue: #109ce7;
+}
+body {
+  background-color: var(--bg-color) !important;
+}
